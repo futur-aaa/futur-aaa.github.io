@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veranstaltungsübersicht</title>
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Futura Std', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white; /* Hintergrundfarbe weiß */
+            color: black; /* Schriftfarbe schwarz */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+        .back-arrow {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule</h1>
+        <h2>June 14, 2024:</h2>
+        <ul>
+            <li>04.00 p.m. to 06.00 p.m.: <b>Workshop for live coding beginners</b></li>
+            <li>07.00 p.m. to 10.00 p.m.: <b>Opening ceremony and get-together</b></li>
+        </ul>
+
+        <h2>June 15, 2024</h2>
+        <ul>
+            <li>10.00 a.m. to 01.00 p.m.: <b>Workshop 1</b></li>
+            <li>01.00 p.m. to 02.00 p.m.: <b>ZEN session</b></li>
+            <li>01.00 p.m. to 05.00 p.m.: <b>Workshop 2</b></li>
+            <li>07.00 p.m. to 10.00 p.m.: <b>Algo-Rave</b></li>
+        </ul>
+
+        <h2>June 16, 2024</h2>
+        <ul>
+            <li>11.00 a.m. to 12.00 a.m.: <b>Live Coding breakfast</b></li>
+            <li>12.00 a.m. to 02.00 p.m.: <b>Workshop 3</b></li>
+        </ul>
+        <br />
+        <a href="index.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+    <video autoplay loop muted id="background-video">
+        <source src="https://www.pexels.com/download/video/14904151/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

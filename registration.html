@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futur AAA - An ICLC '24 Satellite Event</title>
+    <!---<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">-->
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Futura Std', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #ticket-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        #ticket-form h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #ticket-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        #ticket-form input[type="text"],
+        #ticket-form input[type="email"],
+        #ticket-form select, 
+        #ticket-form button {
+            width: calc(100% - 20px); /* Abzug der Padding-Breite */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box; /* Berücksichtigung der Border- und Padding-Breite */
+        }
+        #ticket-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #ticket-form button:hover {
+            background-color: #45a049;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white; /* Hintergrundfarbe weiß */
+            color: black; /* Schriftfarbe schwarz */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+        .back-arrow {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="ticket-form">
+            <h2>Register for Futur AAA</h2>
+            <br>
+            <div>
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" name="ticket-type">
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="button" id="register-button">Register</button>
+        </form>
+        <a href="index.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+    <video autoplay loop muted id="background-video">
+        <source src="https://www.pexels.com/download/video/14904151/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+<script>
+document.getElementById('register-button').addEventListener('click', function(event) {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+
+    if (!name || !email || !validateEmail(email)) {
+        alert('Bitte fülle alle Felder korrekt aus.');
+    } else {
+        window.location.href = 'payment.html'; // Leite den Benutzer zur payment.html Seite weiter
+    }
+});
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+</script>
+</html>

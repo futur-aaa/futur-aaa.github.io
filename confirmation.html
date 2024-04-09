@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futur AAA - An ICLC '24 Satellite Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+    <link rel="stylesheet" href="styles_index.css">
+    <style>
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            padding: 30px;
+            font-size: 1.5em;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white; /* Hintergrundfarbe weiß */
+            color: black; /* Schriftfarbe schwarz */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+        .back-arrow {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank you for your registration.</h1>
+        <br />
+        <br />
+        <p>A confirmation email has been sent to <span id="email-placeholder"></span></p>
+        <a href="registration.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+    <video autoplay loop muted id="background-video">
+        <source src="https://www.pexels.com/download/video/14904151/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        // Extrahiere den Wert der to_email aus der URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const to_email = urlParams.get('to_email');
+
+        // Setze die E-Mail-Adresse in den Platzhalter
+        document.getElementById('email-placeholder').textContent = to_email;
+    </script>
+</body>

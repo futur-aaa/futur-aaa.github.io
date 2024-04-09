@@ -553,8 +553,21 @@ html {
   
   .hero-container {
     position: relative;
-    padding: 250px 0;
+    padding: 300px 0;
     text-align: center;
+  }
+
+  .hero-container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("logo.png") 50% 20% no-repeat;
+    background-size: 25%;
+    opacity: 0.45;
   }
   
   .environment {

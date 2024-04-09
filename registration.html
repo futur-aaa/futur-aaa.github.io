@@ -7,6 +7,7 @@
     <!---<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">-->
     <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
         body {
             font-family: 'Futura Std', sans-serif;
@@ -43,8 +44,7 @@
             margin-bottom: 8px;
         }
         #ticket-form input[type="text"],
-        #ticket-form input[type="email"],
-        #ticket-form select, 
+        #ticket-form input[type="email"], 
         #ticket-form button {
             width: calc(100% - 20px); /* Abzug der Padding-Breite */
             padding: 10px;
@@ -53,6 +53,21 @@
             margin-bottom: 15px;
             box-sizing: border-box; /* Berücksichtigung der Border- und Padding-Breite */
         }
+
+        #ticket-form input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box; /* Berücksichtigung der Border- und Padding-Breite */
+        }
+
+        /*#total-price,*/
+        #total-price-label {
+           font-size: 1.2em; /* Größere Schriftgröße */
+           font-weight: bold; /* Fettschrift */
+        }
+
         #ticket-form button {
             background-color: #4CAF50;
             color: white;
@@ -85,53 +100,87 @@
             min-height: 100%;
             z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
         }
+
+        .paypal-button-disabled {
+            /*cursor: not-allowed;*/
+            pointer-events: none;
+        }
+        #paypal-button-container:hover #hint-text {
+            display: block; /* Zeige den Hinweistext nur an, wenn der Mauszeiger über paypal-button-container liegt */
+        }
     </style>
+    <script>
+        // Initialize EmailJS with your user ID
+        emailjs.init("2lo-FhH4FdFDil-t4");
+        
+        // Function to send confirmation email
+        function sendEmail(name, email, quantity, price) {
+            emailjs.send("service_oa5t2fg", "template_mtpok0a", {
+                to_name: name,
+                to_email: email,
+                ticket_quantity: quantity,
+                total_price: price
+            }).then(function(response) {
+                console.log("Email sent successfully!", response);
+                alert("Confirmation email sent!");
+            }, function(error) {
+                console.error(email, error);
+                alert("An error occurred while sending the confirmation email.");
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <form id="ticket-form">
+        <form id="ticket-form" onsubmit="event.preventDefault();">
             <h2>Register for Futur AAA</h2>
             <br>
             <div>
-                <label for="ticket-type">Ticket Type:</label>
-                <select id="ticket-type" name="ticket-type">
-                    <option value="standard">Standard</option>
-                    <option value="premium">Premium</option>
-                    <option value="vip">VIP</option>
-                </select>
-            </div>
-            <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" required><br>
             </div>
             <div>
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br>
             </div>
-            <button type="button" id="register-button">Register</button>
+            <div>
+                <label for="quantity">Festival Ticket Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1" required onchange="updateTotal()">
+                <span> &nbsp; </span>
+                <span id="total">1 x 30,00 €</span><font size="-1.4"> (incl. 19% MwSt)</font>
+                <br>
+            </div>
+            <br />
+            <div>
+                <label id="total-price-label">Total Price:</label>
+                <span id="total-price">30,00 €</span><font size="-1.4"> (incl. 19% MwSt)</font>
+            </div>
+            <br />
+            <br />
+            <!-- <div><button onclick="register()">Register</button></div> -->
+            <div id="paypal-button-container" class="paypal-button-disabled"></div>
+            <p id="result-message"></p>
+            <script src="https://www.paypal.com/sdk/js?client-id=AYFclLl4xb3QKeI_ECiqkjgC-xOmCktMY855D9lCA7H68UpJgoNSc8W8LQ_uQNLzgt2Yf90eMn7HT46K&currency=EUR"></script>
+            <script src="app.js"></script>
         </form>
+        <div style="max-width: 400px; margin-top: 20px; background-color: #333333; border-radius: 8px; padding: 20px;">
+            <div style="display: flex; align-items: center;">
+                <img src="info.png" alt="Info" style="width: 40px; height: 40px; margin-right: 10px;">
+                <p style="text-align: left; margin: 0; font-size: 0.95em; line-height: 1.5; color: #ffffff;">
+                    By purchasing the Festival Ticket, you gain access to all festival events listed in the programme. This includes workshops, the opening event, the Algorave, the Live Coding Breakfast, as well as ZEN/Yoga sessions.
+                </p>
+            </div>
+        </div>
         <a href="index.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
     </div>
     <video autoplay loop muted id="background-video">
-        <source src="https://www.pexels.com/download/video/14904151/" type="video/mp4">
+        <source src="https://freestockfootagearchive.com/wp-content/uploads/2023/01/Subtle-Digital-Glitch-Film-Errors-Digi-Grain.mp4?_=1" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <script>
+        window.onload = function() {
+        document.getElementById('quantity').value = 1;
+        };
+    </script>
 </body>
-<script>
-document.getElementById('register-button').addEventListener('click', function(event) {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-
-    if (!name || !email || !validateEmail(email)) {
-        alert('Bitte fülle alle Felder korrekt aus.');
-    } else {
-        window.location.href = 'payment.html'; // Leite den Benutzer zur payment.html Seite weiter
-    }
-});
-
-function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
-}
-</script>
 </html>

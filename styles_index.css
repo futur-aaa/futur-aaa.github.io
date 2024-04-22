@@ -69,7 +69,7 @@ html {
               text-decoration: none;
               border-radius: 5px;
               font-size: 1.2em;
-              margin-top: 250px;
+              margin-top: 10em;/*250px;*/
           }
           #background-video {
               position: fixed;

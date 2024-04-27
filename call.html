@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme</title>
+    <link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            font-size: 1.3em;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            line-height: 1.4em;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white; /* Hintergrundfarbe weiß */
+            color: black; /* Schriftfarbe schwarz */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 40px;
+        }
+        .back-arrow {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="glitch.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Open Calls</h1>
+        <p>We are looking for live coding artist and collectives which are willing to create an unforgettable futur AAA festival in Zwickau from June 14 - 16, 2024. There are three different calls which you can apply for. Please find further information under the following links.</p> 
+    </div>
+    <div class="container">
+        <h2>Algorave</h2>
+        <p>
+            Call for artists for our Algorave on 15th June 2024.<br />
+            Please find further details at <a href="https://github.com/futur-aaa/open_call/blob/689a720ba9ba9bf4328e30840de098a1bb89bb07/call_algorave_2024-06-15_futur-aaa.md" target=”_blank” style="color:#FF0000;">Call for Algorave artists</a>.
+        </p>
+    </div>
+    <div class="container">
+        <h2>Opening Night Contribution</h2>
+        <p>
+            Call for a project/installation that showcases the depth and variety of live coding in a broad sense on 14th June 2024.<br />
+            Please find further details at <a href="https://github.com/futur-aaa/open_call/blob/689a720ba9ba9bf4328e30840de098a1bb89bb07/call_interactive_live_performance_2024-06-14_futur-aaa.md" target=”_blank” style="color:#FF0000;">Call for live coding installation</a>.
+        </p>
+    </div>
+    <div class="container">
+        <h2>Video Messages</h2>
+        <p>
+            Call for video messages which show our audience where live coding is performed and who are the people doing it.<br />
+            Please find further details at <a href="https://github.com/futur-aaa/open_call/blob/689a720ba9ba9bf4328e30840de098a1bb89bb07/call_video_messages_2024-06-14_futur-aaa.md" target=”_blank” style="color:#FF0000;">Call for video messages</a>.
+        </p>
+    </div>
+    <div class="container">
+        <br />
+        <a href="index.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+</body>
+</html>

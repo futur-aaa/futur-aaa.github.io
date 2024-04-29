@@ -6,14 +6,23 @@
     <title>Futur AAA - An ICLC '24 Satellite Event</title>
     <link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
     <link rel="stylesheet" href="styles_index.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <div class="navigation">
-        <a href="schedule.html">Programme</a>
-        <a href="travel.html">Travel & Stay</a>
-        <a href="call.html">Open Call</a>
-        <a href="about.html">About</a>
-    </div>
+    <header class="header">
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="schedule.html">Programme</a></li>
+                <li><a href="travel.html">Travel & Stay</a> </li>
+                <li><a href="call.html">Open Call</a> </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main>
     <video autoplay loop muted id="background-video">
         <source src="flickering.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -31,5 +40,6 @@
         </p>
         <a href="registration.html" class="btn">Register</a>
     </div>
+    </main>
 </body>
 </html>

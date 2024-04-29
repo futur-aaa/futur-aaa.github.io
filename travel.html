@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme</title>
     <link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
     <style>
         body {
             font-family: 'Jost', sans-serif;
@@ -54,6 +55,22 @@
     </style>
 </head>
 <body>
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html" class="logo"><b>futur AAA</b></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="schedule.html">Programme</a></li>
+                <li><a href="travel.html">Travel & Stay</a> </li>
+                <li><a href="call.html">Open Call</a> </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>  
     <video autoplay loop muted id="background-video">
         <source src="glitch.mp4" type="video/mp4">
         Your browser does not support the video tag.

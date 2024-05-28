@@ -1,6 +1,6 @@
 :root{
     --white: #f9f9f9;
-    --black: rgba(0, 0, 0, 0.5);
+    --black: rgba(0, 0, 0, 0.);
     --gray: #85888C;
 } /* variables*/
 /* Reset */
@@ -29,6 +29,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
+    height: 56px;
     /* display: flex; 
     align-items: center;
     justify-content: space-between; */

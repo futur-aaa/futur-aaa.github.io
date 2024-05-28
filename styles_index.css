@@ -571,14 +571,14 @@ html {
 
           /* Sticky logo */
 .logo {
-  position: fixed;
-  bottom: 10px;
+  position: absolute;
+  /* bottom: 10px; */
   right: 50%;
   transform: translateX(50%);
   z-index: 1000;
   background-color: var(--white); /* Add white background */
   opacity: 1.0;
-  padding: 5px; /* Add padding to create some space around the logo */
+  /*padding: 0px;  Add padding to create some space around the logo */
   width: 650px; /* Breite des Containers anpassen */
   height: 100px; /* Höhe des Containers anpassen */
   border-radius: 5px; /* Optionally, add rounded corners */

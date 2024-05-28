@@ -568,3 +568,39 @@ html {
               center no-repeat;
             background-size: cover;
           }
+
+          /* Sticky logo */
+.logo {
+  position: fixed;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1000;
+  background-color: var(--white); /* Add white background */
+  opacity: 1.0;
+  padding: 5px; /* Add padding to create some space around the logo */
+  width: 650px; /* Breite des Containers anpassen */
+  height: 100px; /* Höhe des Containers anpassen */
+  border-radius: 5px; /* Optionally, add rounded corners */
+  display: flex; /* Make the container a flex container */
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  /*overflow: hidden;  Hide any overflowing content */
+}
+.foerderlogo {
+  width: auto; /* Automatische Breite für Flexibilität */
+  height: auto;
+  max-width: 40%; /* Maximale Breite des Logos auf 100% des Container */
+  margin-bottom: 5px; /* Abstand zwischen den Logos */
+}
+/* @media (min-width: 768px) {
+  .foerderlogo {
+      max-width: 200px; 
+  }
+} */
+
+@media (min-width: 1024px) {
+  .foerderlogo {
+      max-width: 300px; /* Erhöhe die maximale Breite der Logos weiter für noch größere Bildschirme */
+  }
+}

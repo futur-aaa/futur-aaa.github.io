@@ -29,14 +29,9 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
-}
-/* Logo */
-.logo{
-    display: inline-block;
-    color: var(--white);
-    padding: 10px 20px; 
-    /*font-size: 60px;
-    margin-left: 50px;*/
+    /* display: flex; 
+    align-items: center;
+    justify-content: space-between; */
 }
 /* Nav menu */
 .nav{

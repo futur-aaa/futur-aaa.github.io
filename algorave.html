@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme</title>
+    <link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            font-size: 1.3em;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            line-height: 1.4em;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white; /* Hintergrundfarbe weiß */
+            color: black; /* Schriftfarbe schwarz */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 40px;
+        }
+        .back-arrow {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html" class="logo"><b>futur AAA</b></a>
+        <!-- Hamburger icon <img src="logo.png" width="50px">-->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="schedule.html">Programme</a></li>
+                <li><a href="travel.html">Travel & Stay</a> </li>
+                <li><a href="call.html">Open Call</a> </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <video autoplay loop muted id="background-video">
+        <source src="glitch.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Algorave Line-Up</h1>
+        <h3>Johan Stuijt</h3>
+        <p>(NL)</p>
+        <h3>Parkellipsen</h3>
+        <p>(Barcelona/ES)</p>
+        <h3>MrReason</h3>
+        <p>(Leipzig/DE)</p>
+        <h3>TraumaZone</h3>
+        <p>(Berlin/DE)</p>
+        <h3>Nabìr</h3>
+        <p>(Rome/IT)</p>
+        <h3>GenCaster</h3>
+        <p>(Düsseldorf/DE)</p>
+        <h3>alsolquema + @Napain</h3>
+        <p>(Leipzig/DE)</p>
+        <h3>Flor de Fuego</h3>
+        <p>(Dortmund/DE)</p>
+        <h3>Bertolt Meyer</h3>
+        <p>(Chemnitz/DE)</p>
+        <br />
+        <a href="index.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+</body>
+</html>

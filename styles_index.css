@@ -593,11 +593,11 @@ html {
   max-width: 40%; /* Maximale Breite des Logos auf 100% des Container */
   margin-bottom: 5px; /* Abstand zwischen den Logos */
 }
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .foerderlogo {
-      max-width: 200px; 
+      max-width: 300px; 
   }
-} */
+} 
 
 @media (min-width: 1024px) {
   .foerderlogo {

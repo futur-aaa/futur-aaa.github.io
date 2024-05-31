@@ -56,6 +56,26 @@ html {
               font-size: 1em;
               margin-top: 10em;/*250px;*/
           }
+          .social-icons {
+              position: fixed;
+              top: 40px;
+              left: 20px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              z-index: 1000; /* Ensure the icons are above other elements */
+          }
+
+          .social-icons a {
+              width: 60px; /* Adjust the size of the icons */
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+              border-radius: 20%; /* Make the background round */
+              transition: background-color 0.3s;
+          }
           #background-video {
               position: fixed;
               right: 0;

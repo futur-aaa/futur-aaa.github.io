@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme</title>
     <link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="navbar.css">
     <style>
         body {
@@ -52,6 +53,26 @@
             min-height: 100%;
             z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
         }
+        .social-icons {
+              position: fixed;
+              top: 40px;
+              left: 20px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              z-index: 1000; /* Ensure the icons are above other elements */
+          }
+
+          .social-icons a {
+              width: 60px; /* Adjust the size of the icons */
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+              border-radius: 20%; /* Make the background round */
+              transition: background-color 0.3s;
+          }
     </style>
 </head>
 <body>
@@ -64,6 +85,7 @@
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
+                <li><a href="index.html">Futur AAA</a></li>
                 <li><a href="schedule.html">Programme</a></li>
                 <li><a href="travel.html">Travel & Stay</a> </li>
                 <!-- <li><a href="call.html">Open Call</a> </li> -->
@@ -84,19 +106,25 @@
         <p>
             We recommend all visitors (especially from within Europe) to travel by train as much as possible to reduce your environmental impact.<br />
             Zwickau can be reached by train from Leipzig (line S5, S5x), from Dresden (line RE3/RB30, rail replacement service if necessary), from Chemnitz (line RB30, rail replacement service if necessary) and from Hof (line RE 3).<br />
-            We recommend using the <a href="https://www.bahn.de/service/mobile/db-navigator" target=”_blank” style="color:#FF0000;">DB Navigator App</a> and <a href="https://www.vms.de/" target=”_blank” style="color:#FF0000;">VMS website</a> to plan your trip to Zwickau.</p>
+            We recommend using the <a href="https://www.bahn.de/service/mobile/db-navigator" target=”_blank” style="color:#FF0000; text-decoration: underline;">DB Navigator App</a> and <a href="https://www.vms.de/" target=”_blank” style="color:#FF0000;text-decoration: underline;">VMS website</a> to plan your trip to Zwickau.</p>
     </div>
     <div class="container">
         <h1>Accommodation</h1>
         <p>
-            All guests with a <a href="registration.html" target=”_blank” style="color:#FF0000;">festival ticket</a> have the opportunity to camp at the Kunstplantage Zwickau. 
+            All guests with a <a href="registration.html" target=”_blank” style="color:#FF0000; text-decoration: underline;">festival ticket</a> have the opportunity to camp at the Kunstplantage Zwickau. 
             For all others there is the possibility to stay overnight in one of Zwickau's hotels or guesthouses. Here is a small selection:<br />
             <ul>
-                <li><a href="https://apartmenthaus-am-dom-zwickau-de.hotel-mix.de/" target=”_blank” style="color:#FF0000;">Apartmenthaus am Dom - Zwickau</a></li>
-                <li><a href="https://alte-muenze-zwickau.de/uebernachten/" target=”_blank” style="color:#FF0000;">Gasthaus Alte Münze</a></li>
-                <li><a href="http://hotel-merkur-zwickau.de" target=”_blank” style="color:#FF0000;">Hotel Merkur</a></li>
+                <li><a href="https://apartmenthaus-am-dom-zwickau-de.hotel-mix.de/" target=”_blank” style="color:#FF0000; text-decoration: underline;">Apartmenthaus am Dom - Zwickau</a></li>
+                <li><a href="https://alte-muenze-zwickau.de/uebernachten/" target=”_blank” style="color:#FF0000; text-decoration: underline;">Gasthaus Alte Münze</a></li>
+                <li><a href="http://hotel-merkur-zwickau.de" target=”_blank” style="color:#FF0000; text-decoration: underline;">Hotel Merkur</a></li>
             </ul>
         </p><br />
         <a href="index.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/futur.aaa/" target="_blank" class="fab fa-instagram">
+        </a>
+        <a href="https://social.toplap.org/@futurAAA" target="_blank" class="fab fa-mastodon">
+        </a>
     </div>
 </html>

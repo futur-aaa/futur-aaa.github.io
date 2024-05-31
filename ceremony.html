@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme</title>
     <link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="navbar.css">
     <style>
         body {
@@ -55,6 +56,26 @@
             min-height: 100%;
             z-index: -1; /* Stellen Sie sicher, dass das Video im Hintergrund liegt */
         }
+        .social-icons {
+              position: fixed;
+              top: 40px;
+              left: 20px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              z-index: 1000; /* Ensure the icons are above other elements */
+          }
+
+          .social-icons a {
+              width: 60px; /* Adjust the size of the icons */
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+              border-radius: 20%; /* Make the background round */
+              transition: background-color 0.3s;
+          }
     </style>
 </head>
 <body>
@@ -67,6 +88,7 @@
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
+                <li><a href="index.html">Futur AAA</a></li>
                 <li><a href="schedule.html">Programme</a></li>
                 <li><a href="travel.html">Travel & Stay</a> </li>
                 <!-- <li><a href="call.html">Open Call</a> </li> -->
@@ -87,15 +109,15 @@
 
         <p>Get inspired as harte echtzeit and MC Algorhythm welcome you to futur AAA festival with words that resonate and set the tone for an immersive experience ahead.</p>
 
-        <h3>Immersive Live Coding Performance by <span style="color: rgb(14, 150, 1)">Plantavibras</span></h3>
+        <h3>Immersive LC Performance by <span style="color: rgb(14, 150, 1)">Plantavibras (Sonic Shower)</span></h3>
 
-        <p>Witness the magic unfold as Kollektiv Plantavibras from Barcelona/ES takes the stage, weaving together intricate soundscapes and mesmerizing visuals in a live-coding performance that pushes the boundaries of creativity.</p>
+        <p>Witness the magic unfold as Kollektiv Plantavibras (Sonic Shower) from Barcelona/ES takes the stage, weaving together intricate soundscapes and mesmerizing visuals in a live-coding performance that pushes the boundaries of creativity.</p>
 
         <h3>Live Coding Poetry by <span style="color: rgb(14, 150, 1)">bla.punk</span></h3>
 
         <p>Prepare to be amazed as bla.punk takes the stage for an interactive live-coding poetry session. Using words provided by the audience, bla.punk will craft spontaneous poems in real time, blending the art of coding with the beauty of language. Join us for a unique and engaging experience where every word becomes a piece of the poetic puzzle.</p>
 
-        <h3>Live Coding Documentation</h3>
+        <h3>Live Coding Documentation <span style="color: rgb(14, 150, 1)">Sounds of Code</span></h3>
 
         <p>Join us for a captivating journey into the world of live coding and algorave through our documentary film. Experience firsthand the creativity, innovation, and excitement of live coding as we delve into its intricacies and explore the vibrant culture of the algorave scene.</p>
 
@@ -104,6 +126,12 @@
         <p>After the performances, stick around for a casual get-together where you can mingle with fellow attendees, artists, and performers, share ideas, and celebrate the start of an incredible journey into the world of live coding.</p>
         <br />
         <a href="schedule.html" class="back-button"><span class="back-arrow">&#8592;</span>Back</a>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/futur.aaa/" target="_blank" class="fab fa-instagram">
+        </a>
+        <a href="https://social.toplap.org/@futurAAA" target="_blank" class="fab fa-mastodon">
+        </a>
     </div>
 </body>
 </html>

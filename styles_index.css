@@ -602,6 +602,14 @@ html {
           }
 
           /* Sticky logo */
+
+.footer {
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 20px;
+  /* background-color: #f8f8f8; */
+}
 .logo {
   position: absolute;
   /* bottom: 10px; */
@@ -628,7 +636,7 @@ html {
 }
 @media (min-width: 768px) {
   .foerderlogo {
-      max-width: 200px; 
+      max-width: 300px; 
   }
 } 
 

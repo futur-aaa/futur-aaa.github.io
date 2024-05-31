@@ -76,6 +76,18 @@ html {
               border-radius: 20%; /* Make the background round */
               transition: background-color 0.3s;
           }
+          @media (max-width: 600px) {
+            .social-icons {
+                right: 20px;
+                bottom: 20px;
+            }
+
+            .social-icons a {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
           #background-video {
               position: fixed;
               right: 0;

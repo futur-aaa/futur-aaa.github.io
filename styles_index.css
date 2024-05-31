@@ -57,8 +57,8 @@ html {
               margin-top: 10em;/*250px;*/
           }
           .social-icons {
-              position: fixed;
-              top: 80px;
+              position: absolute;
+              top: 20px;
               right: 20px;
               display: flex;
               flex-direction: column;

@@ -593,6 +593,7 @@ html {
 .logo {
   position: absolute;
   /* bottom: 10px; */
+  margin-top: 200px;
   right: 50%;
   transform: translateX(50%);
   z-index: 1000;

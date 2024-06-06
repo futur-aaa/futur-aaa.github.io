@@ -60,6 +60,7 @@ body {
     cursor: pointer;
     float: right;
     padding: 25px 20px;
+    z-index: 2;
 }/* Style label tag */
 
 .hamb-line {
@@ -95,8 +96,11 @@ body {
 .side-menu:checked ~ nav{
     max-height: 100%;
 }
+.side-menu:checked ~ .nav .menu a {
+    background-color: rgb(87, 87, 87); /* Add this line to ensure black background when menu is open */
+}
 .side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
+    background: --var(white);
 }
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);

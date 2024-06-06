@@ -58,12 +58,12 @@ html {
           }
           .social-icons {
               position: absolute;
-              top: 0px;
+              top: 20px;
               left: 20px;
               display: flex;
               flex-direction: column;
               gap: 10px;
-              z-index: 1000; /* Ensure the icons are above other elements */
+              /*z-index: 1000;  Ensure the icons are above other elements */
           }
 
           .social-icons a {
